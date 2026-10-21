@@ -32,7 +32,7 @@ describe('Button', () => {
         </Button>
       </>,
     )
-    expect(screen.getByRole('button', { name: 'Retirement Manager' })).toHaveClass('bg-sun', 'text-navy', 'min-h-11')
+    expect(screen.getByRole('button', { name: 'Retirement Manager' })).toHaveClass('bg-sun', 'text-navy', 'min-h-12', 'md:min-h-11')
     expect(screen.getByRole('button', { name: 'Join' })).toHaveClass('border-teal-700', 'min-h-12', 'w-full')
   })
 })

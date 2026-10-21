@@ -17,17 +17,17 @@ const variantClasses: Record<ButtonVariant, string> = {
   text: 'bg-transparent text-teal-700 underline-offset-4 hover:underline',
 }
 
-// Small is 44px high, not 38px, to meet the minimum touch target.
+// Small is 48px high on phones (44px from md), not 38px, to meet the minimum touch target.
 const sizeClasses: Record<ButtonSize, string> = {
   large: 'min-h-12 px-6 py-3.5 text-button',
-  small: 'min-h-11 px-4 py-2 text-body-s-strong whitespace-nowrap',
+  small: 'min-h-12 px-4 py-2 text-body-s-strong whitespace-nowrap md:min-h-11',
 }
 
 export function buttonClassName({ variant = 'primary', size = 'large', fullWidth = false }: ButtonStyleProps) {
   return classNames(
     'inline-flex cursor-pointer items-center justify-center gap-2 rounded-pill text-center transition-colors',
     variantClasses[variant],
-    variant === 'text' ? classNames('px-1', size === 'large' ? 'min-h-12 text-button' : 'min-h-11 text-body-s-strong') : sizeClasses[size],
+    variant === 'text' ? classNames('px-1', size === 'large' ? 'min-h-12 text-button' : 'min-h-12 text-body-s-strong md:min-h-11') : sizeClasses[size],
     fullWidth && 'w-full',
   )
 }
