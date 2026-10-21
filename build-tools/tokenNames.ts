@@ -59,4 +59,6 @@ export const requiredTokens = [
   ...radiusNames.map((name) => `radius.${name}`),
   'spacing.contentMaxWidth',
   'elevation.overlay',
+  'border.width.input',
+  'border.embedPlaceholder.width',
 ]

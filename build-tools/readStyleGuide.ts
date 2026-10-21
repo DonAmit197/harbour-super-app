@@ -27,6 +27,7 @@ export type StyleGuide = {
   spacing: { contentMaxWidth: number }
   radius: Record<string, number>
   elevation: { overlay: string }
+  border: { width: { input: number }; embedPlaceholder: { width: number } }
 }
 
 function getToken(source: unknown, path: string): unknown {

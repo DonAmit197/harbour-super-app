@@ -19,6 +19,8 @@ function buildRootVariables(guide: StyleGuide) {
     ...radiusNames.map((name) => `--hs-radius-${name}: ${guide.radius[name]}px;`),
     `--hs-content-max-width: ${guide.spacing.contentMaxWidth}px;`,
     `--hs-shadow-overlay: ${guide.elevation.overlay};`,
+    `--hs-border-strong: ${guide.border.width.input}px;`,
+    `--hs-border-dashed: ${guide.border.embedPlaceholder.width}px;`,
     ...chart.series.slice(0, 4).map((value, index) => `--hs-chart-${index + 1}: ${value};`),
     `--hs-chart-line: ${chart.line};`,
     `--hs-chart-area: ${chart.area.value};`,
@@ -58,10 +60,14 @@ function buildTailwindTheme(guide: StyleGuide) {
   ])
 }
 
-function buildGradientUtilities() {
-  return Object.values(gradientNames).map((name) =>
-    block(`@utility bg-gradient-${name}`, [`background-image: var(--hs-gradient-${name});`]),
-  )
+function buildUtilities() {
+  return [
+    ...Object.values(gradientNames).map((name) =>
+      block(`@utility bg-gradient-${name}`, [`background-image: var(--hs-gradient-${name});`]),
+    ),
+    block('@utility border-strong', ['border-width: var(--hs-border-strong);']),
+    block('@utility border-dashed-slot', ['border-width: var(--hs-border-dashed);', 'border-style: dashed;']),
+  ]
 }
 
 export function buildThemeCss(guide: StyleGuide) {
@@ -69,7 +75,7 @@ export function buildThemeCss(guide: StyleGuide) {
     '/* Generated from assets/harbour-super-styleguide.json by build-tools/harbourThemePlugin.ts. Do not edit. */',
     block(':root', buildRootVariables(guide)),
     buildTailwindTheme(guide),
-    ...buildGradientUtilities(),
+    ...buildUtilities(),
     buildDaisyTheme(),
   ]
   return `${sections.join('\n\n')}\n`

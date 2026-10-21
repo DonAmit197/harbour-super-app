@@ -31,6 +31,9 @@ Tailwind v4 @theme utilities + DaisyUI "harbour" theme + CSS custom properties
    neutral = ink, base-100 = white, base-200 = mist, base-300 = border, base-content = ink,
    info = lagoon-50, success = positive, error = negative, `--radius-field` = radius.input, `--radius-box` = radius.card.
 4. Chart colours as `--hs-chart-1` … `--hs-chart-4`, used by the SVG chart components.
+5. Utilities: `bg-gradient-banner`, `bg-gradient-hero-wash`, `border-strong` (`border.width.input`, inputs and
+   secondary buttons) and `border-dashed-slot` (`border.embedPlaceholder.width`, the Pega slot).
+   Note: current Chrome rounds borders down to whole pixels, so 1.5px shows as 1px there.
 
 ## Rules
 - On JSON change in dev, the plugin regenerates `theme.css` and triggers a reload.
