@@ -1,5 +1,5 @@
 import type { StyleGuide } from './readStyleGuide'
-import { colorTokens, gradientNames, radiusNames, typeScaleNames } from './tokenNames'
+import { breakpointNames, colorTokens, gradientNames, radiusNames, typeScaleNames } from './tokenNames'
 import { buildDaisyTheme } from './buildDaisyTheme'
 
 const rem = (px: number) => `${px / 16}rem`
@@ -56,6 +56,8 @@ function buildTailwindTheme(guide: StyleGuide) {
     '--radius-*: initial;',
     ...radiusNames.map((name) => `--radius-${name}: var(--hs-radius-${name});`),
     '--container-content: var(--hs-content-max-width);',
+    '--breakpoint-*: initial;',
+    ...breakpointNames.map((name) => `--breakpoint-${name}: ${rem(guide.breakpoints.tailwind[name])};`),
     '--shadow-overlay: var(--hs-shadow-overlay);',
   ])
 }

@@ -39,7 +39,9 @@ export const typeScaleNames: Record<string, string> = {
 
 export const radiusNames = ['input', 'tile', 'card', 'panel', 'pill'] as const
 
-export const gradientNames = { banner: 'banner', heroWash: 'hero-wash' } as const
+export const breakpointNames = ['xs', 'sm', 'md', 'lg', 'xl'] as const
+
+export const gradientNames ={ banner: 'banner', heroWash: 'hero-wash' } as const
 
 const typeProperties = ['family', 'weight', 'size', 'lineHeight', 'letterSpacing']
 
@@ -60,5 +62,6 @@ export const requiredTokens = [
   'spacing.contentMaxWidth',
   'elevation.overlay',
   'border.width.input',
+  ...breakpointNames.map((name) => `breakpoints.tailwind.${name}`),
   'border.embedPlaceholder.width',
 ]

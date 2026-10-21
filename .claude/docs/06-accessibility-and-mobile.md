@@ -31,6 +31,8 @@ Target: WCAG 2.2 AA. Audience is mostly 60+, often on phones.
 - Body text at least 16px. Page gutter 16px on phones, 80px on desktop, content max 1280px.
 - Phone layouts follow the "– Mobile" mockups: stacked cards, full-width buttons, accordion footer,
   member header with logo, "Retirement Manager" accent button and menu.
+- Header switch points: the public header shows the desktop nav from `lg` (1024). The member header has more
+  items, so it keeps the phone pattern until `xl` (1280). Below `xs` (360) the member header shows the logo mark only.
 
 ## Smooth scrolling (Lenis)
 - `useSmoothScroll` starts Lenis once in `App` with `autoRaf: true` and smooth mouse-wheel scrolling.

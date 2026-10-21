@@ -5,6 +5,7 @@ import '@fontsource/poppins/latin-600.css'
 import '@fontsource/inter/latin-400.css'
 import '@fontsource/inter/latin-500.css'
 import '@fontsource/inter/latin-600.css'
+import 'lenis/dist/lenis.css'
 import { App } from './app/App'
 import './styles/index.css'
 

@@ -26,6 +26,7 @@ Tailwind v4 @theme utilities + DaisyUI "harbour" theme + CSS custom properties
      each with its `--line-height`, `--letter-spacing` and `--font-weight` companions
    - radii: `--radius-input`, `--radius-tile`, `--radius-card`, `--radius-panel`
    - `--container-content` from `spacing.contentMaxWidth`
+   - breakpoints `xs` (360), `sm`, `md`, `lg`, `xl` from `breakpoints.tailwind`
 3. A DaisyUI theme block (`@plugin "daisyui/theme" { name: "harbour"; default: true; … }`) mapping:
    primary = teal-700, primary-content = white, secondary = navy, accent = sun, accent-content = navy,
    neutral = ink, base-100 = white, base-200 = mist, base-300 = border, base-content = ink,

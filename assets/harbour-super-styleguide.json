@@ -141,7 +141,7 @@
 
   "breakpoints": {
     "designWidths": { "mobile": 390, "desktop": 1440 },
-    "tailwind": { "sm": 640, "md": 768, "lg": 1024, "xl": 1280 },
+    "tailwind": { "xs": 360, "sm": 640, "md": 768, "lg": 1024, "xl": 1280 },
     "approach": "Mobile first. Design and build at 390px, then enhance from md and lg upwards."
   },
 

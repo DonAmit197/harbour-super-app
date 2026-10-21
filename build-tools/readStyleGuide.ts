@@ -28,6 +28,7 @@ export type StyleGuide = {
   radius: Record<string, number>
   elevation: { overlay: string }
   border: { width: { input: number }; embedPlaceholder: { width: number } }
+  breakpoints: { tailwind: Record<string, number> }
 }
 
 function getToken(source: unknown, path: string): unknown {
