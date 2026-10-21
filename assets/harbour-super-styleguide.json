@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Harbour Super brand style guide",
+  "version": "1.0.0",
+  "updated": "2026-10-21",
+  "source": {
+    "figmaFile": "https://www.figma.com/design/7BMN1WM4zXsB4yLxIZvkd3",
+    "figmaPage": "Brand style guide",
+    "figmaVariableCollection": "Harbour colour",
+    "note": "Values match the Figma variables and text styles. If Figma and this file disagree, update this file from Figma."
+  },
+  "brand": {
+    "name": "Harbour Super",
+    "type": "Fictional, member-owned Australian superannuation fund created for demonstration",
+    "tagline": "Stable. Confident. Brighter together.",
+    "logoConcept": "A – The Safe Harbour (protective arc, rising sun, two waves)",
+    "disclaimer": "Harbour Super is a fictional super fund created for this demonstration. Information on this site is general only and does not take into account your objectives, financial situation or needs. Consider whether it is right for you before making a decision.",
+    "acknowledgementOfCountry": "Harbour Super acknowledges the Traditional Custodians of the lands on which we live and work, and pays respect to Elders past and present.",
+    "contactPhone": "1300 975 707",
+    "contactPhoneNote": "From the Australian range reserved for fictional use",
+    "contactHours": "Monday to Friday, 8am–8pm AEST"
+  },
+
+  "color": {
+    "brand": {
+      "navy":     { "value": "#0F4C6B", "rgb": "15, 76, 107",  "usage": "Headings, footer, dark panels, wordmark" },
+      "teal":     { "value": "#18999B", "rgb": "24, 153, 155", "usage": "Logo, illustrations, accents, large text only (3.46:1 on white)" },
+      "teal-700": { "value": "#0E6E74", "rgb": "14, 110, 116", "usage": "Primary buttons, links, active navigation" },
+      "teal-900": { "value": "#0A5056", "rgb": "10, 80, 86",   "usage": "Button hover and pressed, text on lagoon-50" },
+      "lagoon":   { "value": "#7ED9D0", "rgb": "126, 217, 208","usage": "Charts, highlights and text on navy" },
+      "lagoon-50":{ "value": "#E7F6F4", "rgb": "231, 246, 244","usage": "Information notices, icon tiles, chips" },
+      "sand":     { "value": "#F7F3E3", "rgb": "247, 243, 227","usage": "Section backgrounds, topic tiles" },
+      "sun":      { "value": "#F3BE57", "rgb": "243, 190, 87", "usage": "Accent. Retirement Manager call to action only, plus the logo sun" },
+      "sun-50":   { "value": "#FDF4DE", "rgb": "253, 244, 222","usage": "Warnings, demo notices, highlighted quick action" }
+    },
+    "neutral": {
+      "ink":    { "value": "#12334A", "usage": "Body text" },
+      "slate":  { "value": "#4B6374", "usage": "Secondary text, captions, icons" },
+      "border": { "value": "#D5E2E6", "usage": "Dividers, card and input borders" },
+      "mist":   { "value": "#F2F7F8", "usage": "Member area page background" },
+      "white":  { "value": "#FFFFFF", "usage": "Cards, public page background" }
+    },
+    "status": {
+      "positive":    { "value": "#1D7A50", "usage": "Gains, success, completed steps" },
+      "positive-bg": { "value": "#E6F4EC", "usage": "Background for positive chips" },
+      "negative":    { "value": "#B3261E", "usage": "Errors and validation only, never for negative balances in normal display" }
+    },
+    "chart": {
+      "series": ["#0F4C6B", "#18999B", "#F3BE57", "#7ED9D0"],
+      "seriesNames": ["Growth", "Balanced", "Defensive", "Cash"],
+      "line": "#0E6E74",
+      "area": { "value": "#18999B", "opacity": 0.14 },
+      "grid": "#D5E2E6",
+      "barMuted": "#7ED9D0",
+      "barHighlight": "#0E6E74"
+    },
+    "gradient": {
+      "banner": { "type": "linear", "angle": "90deg", "stops": ["#0F4C6B", "#0E6E74"], "usage": "Planner banner, dashboard Retirement Manager banner" },
+      "heroWash": { "type": "linear", "angle": "180deg", "stops": ["#EEF7F7", "#FFFFFF"], "usage": "Light hero backgrounds without a photo" }
+    },
+    "accessiblePairings": [
+      { "text": "ink",       "background": "white",     "ratio": 13.14, "result": "AA" },
+      { "text": "slate",     "background": "white",     "ratio": 6.29,  "result": "AA" },
+      { "text": "white",     "background": "teal-700",  "ratio": 6.0,   "result": "AA" },
+      { "text": "navy",      "background": "sun",       "ratio": 5.43,  "result": "AA" },
+      { "text": "white",     "background": "navy",      "ratio": 9.27,  "result": "AA" },
+      { "text": "lagoon",    "background": "navy",      "ratio": 5.61,  "result": "AA" },
+      { "text": "teal-900",  "background": "lagoon-50", "ratio": 8.23,  "result": "AA" },
+      { "text": "teal",      "background": "white",     "ratio": 3.46,  "result": "AA large text only (24px+, or 18.66px+ bold)" }
+    ]
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "heading": { "family": "Poppins", "fallback": "ui-sans-serif, system-ui, sans-serif", "weights": [500, 600], "source": "Google Fonts" },
+      "body":    { "family": "Inter",   "fallback": "ui-sans-serif, system-ui, sans-serif", "weights": [400, 500, 600], "source": "Google Fonts" }
+    },
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap",
+    "scale": {
+      "display-xl":    { "family": "heading", "weight": 600, "size": 56, "lineHeight": 64, "letterSpacing": "-0.01em", "usage": "Desktop page heroes" },
+      "display-l":     { "family": "heading", "weight": 600, "size": 36, "lineHeight": 44, "letterSpacing": "-0.005em", "usage": "Mobile heroes, desktop section headings" },
+      "heading-h2":    { "family": "heading", "weight": 600, "size": 28, "lineHeight": 36, "letterSpacing": "-0.005em", "usage": "Mobile section headings, greetings" },
+      "heading-h3":    { "family": "heading", "weight": 600, "size": 22, "lineHeight": 30, "letterSpacing": "0", "usage": "Sub-sections, banner titles on mobile" },
+      "heading-h4":    { "family": "heading", "weight": 600, "size": 18, "lineHeight": 26, "letterSpacing": "0", "usage": "Card titles" },
+      "number-xl":     { "family": "heading", "weight": 600, "size": 40, "lineHeight": 48, "letterSpacing": "-0.005em", "usage": "Balances and key figures" },
+      "body-l":        { "family": "body", "weight": 400, "size": 18, "lineHeight": 28, "letterSpacing": "0", "usage": "Intro paragraphs" },
+      "body-m":        { "family": "body", "weight": 400, "size": 16, "lineHeight": 24, "letterSpacing": "0", "usage": "Default body text" },
+      "body-m-strong": { "family": "body", "weight": 600, "size": 16, "lineHeight": 24, "letterSpacing": "0", "usage": "Emphasis, list headings" },
+      "body-s":        { "family": "body", "weight": 400, "size": 14, "lineHeight": 20, "letterSpacing": "0", "usage": "Card text, metadata" },
+      "body-s-strong": { "family": "body", "weight": 600, "size": 14, "lineHeight": 20, "letterSpacing": "0", "usage": "Navigation, small labels, small buttons" },
+      "label-eyebrow": { "family": "body", "weight": 600, "size": 13, "lineHeight": 18, "letterSpacing": "0.08em", "textTransform": "uppercase", "usage": "Eyebrow labels above headings" },
+      "caption":       { "family": "body", "weight": 400, "size": 12, "lineHeight": 16, "letterSpacing": "0", "usage": "Footnotes, chart labels, disclaimers" },
+      "button":        { "family": "body", "weight": 600, "size": 16, "lineHeight": 20, "letterSpacing": "0", "usage": "Large button labels" }
+    },
+    "wordmark": {
+      "harbour": { "family": "Poppins", "weight": 600, "size": 24, "lineHeight": 26, "letterSpacing": "-0.01em", "color": "navy" },
+      "super":   { "family": "Poppins", "weight": 500, "size": 11, "lineHeight": 13, "letterSpacing": "0.38em", "color": "teal" }
+    },
+    "rules": [
+      "Body text is never smaller than 16px on the member website; 14px and 12px are for supporting text only",
+      "Sentence case everywhere except the brand name and product names such as Retirement Manager",
+      "Highlight the last word of hero headlines in teal (#18999B) only when the text is 24px or larger"
+    ]
+  },
+
+  "spacing": {
+    "base": 4,
+    "scale": { "1": 4, "2": 8, "3": 12, "4": 16, "6": 24, "8": 32, "10": 40, "12": 48, "16": 64, "20": 80, "24": 96 },
+    "pageGutter": { "mobile": 16, "desktop": 80 },
+    "contentMaxWidth": 1280,
+    "sectionPadding": { "mobile": 48, "desktop": 96 },
+    "cardPadding": { "mobile": 20, "desktop": 24 },
+    "gridGap": { "mobile": 12, "desktop": 24 }
+  },
+
+  "radius": {
+    "input": 12,
+    "tile": 16,
+    "card": 20,
+    "panel": 24,
+    "pill": 9999,
+    "usage": {
+      "input": "Inputs, notices",
+      "tile": "Small cards, topic tiles, quick actions (14px in dense lists)",
+      "card": "Cards",
+      "panel": "Panels, banners, images",
+      "pill": "Buttons, chips, segmented controls"
+    }
+  },
+
+  "border": {
+    "width": { "default": 1, "input": 1.5, "secondaryButton": 1.5, "accentHighlight": 1.5 },
+    "color": "neutral.border",
+    "embedPlaceholder": { "style": "dashed", "width": 2, "dash": [8, 6], "color": "brand.teal" }
+  },
+
+  "elevation": {
+    "note": "The brand uses flat cards with a 1px border instead of shadows. Use a shadow only for overlays such as menus and dialogs.",
+    "overlay": "0 8px 24px rgba(15, 76, 107, 0.12)"
+  },
+
+  "breakpoints": {
+    "designWidths": { "mobile": 390, "desktop": 1440 },
+    "tailwind": { "sm": 640, "md": 768, "lg": 1024, "xl": 1280 },
+    "approach": "Mobile first. Design and build at 390px, then enhance from md and lg upwards."
+  },
+
+  "iconography": {
+    "style": "Outline",
+    "grid": 24,
+    "strokeWidth": 2,
+    "lineCap": "round",
+    "lineJoin": "round",
+    "library": "lucide-react (the Figma icons use Lucide paths)",
+    "sizes": { "inline": 16, "default": 20, "nav": 24, "tile": 24 },
+    "tile": { "sizes": [36, 44, 48, 64], "radius": "size / 3.5", "background": "lagoon-50", "iconColor": "teal-700" },
+    "set": ["menu", "search", "arrow-right", "arrow-left", "chevron-right", "chevron-down", "user", "lock", "eye", "bell", "home", "bar-chart", "shield", "umbrella", "file", "leaf", "compass", "phone", "calendar", "merge", "users", "check", "check-circle", "info", "alert", "x", "log-out", "help", "trending-up", "wallet", "sunrise", "calculator", "chat", "play-circle", "clipboard", "badge-check", "dollar", "target", "heart", "plus", "grid"],
+    "rules": [
+      "Icons support a text label; they rarely stand alone",
+      "Icon-only buttons need an accessible name (aria-label) and a 44px hit area"
+    ]
+  },
+
+  "components": {
+    "button": {
+      "shape": "pill",
+      "gap": 8,
+      "trailingIcon": "arrow-right (optional)",
+      "sizes": {
+        "large": { "paddingY": 14, "paddingX": 24, "minHeight": 48, "font": "button", "iconSize": 20 },
+        "small": { "paddingY": 9,  "paddingX": 16, "minHeight": 38, "font": "body-s-strong", "iconSize": 16 }
+      },
+      "variants": {
+        "primary":   { "background": "teal-700", "text": "white", "hover": "teal-900", "usage": "Main action in a region. One per region." },
+        "secondary": { "background": "white", "text": "teal-700", "border": "teal-700", "usage": "Supporting action" },
+        "accent":    { "background": "sun", "text": "navy", "usage": "Retirement Manager only, so it always stands out" },
+        "onDark":    { "background": "white", "text": "navy", "usage": "Actions on navy panels or photos" },
+        "text":      { "background": "transparent", "text": "teal-700", "paddingX": 4, "usage": "Low-emphasis links in cards" }
+      },
+      "rules": [
+        "Buttons stay enabled; validate on submit and show the error next to the field",
+        "Full width on mobile when stacked; side by side on desktop with the primary first",
+        "Labels are a verb or verb plus object, in sentence case"
+      ]
+    },
+    "textField": {
+      "label": "body-s-strong, always visible",
+      "input": { "height": 52, "radius": 12, "border": "1.5px neutral.border", "paddingX": 16, "gap": 10, "font": "body-m" },
+      "helper": "caption, slate",
+      "icons": { "leading": "optional, 20px slate", "trailing": "optional, for example show password" },
+      "rules": ["Never use placeholder text as a label or instruction", "Use helper text for guidance"]
+    },
+    "card": { "background": "white", "border": "1px neutral.border", "radius": 20, "padding": 24, "gap": 16 },
+    "notice": {
+      "info":    { "background": "lagoon-50", "text": "teal-900", "icon": "info", "radius": 12, "padding": "12px 16px" },
+      "warning": { "background": "sun-50", "border": "sun", "text": "navy", "icon": "alert", "radius": 20 },
+      "demo":    { "background": "sun-50", "text": "navy", "icon": "info", "radius": 12 }
+    },
+    "chip": { "radius": "pill", "padding": "4px 10px", "font": "caption or body-s-strong" },
+    "segmentedControl": { "background": "mist", "radius": "pill", "padding": 4, "selected": { "background": "navy", "text": "white" }, "unselected": { "text": "slate" } },
+    "headerPublic": {
+      "height": { "mobile": 64, "desktop": 80 },
+      "background": "white",
+      "borderBottom": "1px neutral.border",
+      "desktopNav": ["Why Harbour", "What we offer", "Your super", "Your retirement", "Help and support"],
+      "actions": ["search", "Log in (secondary small)", "Join (primary small)"],
+      "mobile": ["logo at 85%", "Log in (secondary small)", "menu"]
+    },
+    "headerMember": {
+      "desktopNav": ["Home", "My super", "Investments", "Insurance", "Documents"],
+      "activeIndicator": "3px teal-700 bar under the active item, active text teal-700",
+      "cta": "Retirement Manager (accent small, with arrow)",
+      "rightSide": ["bell", "avatar 36px lagoon-50 with initials", "member name", "chevron-down"],
+      "mobile": ["logo at 75%", "Retirement Manager (accent small, no arrow)", "menu"],
+      "rule": "Hide the Retirement Manager button on the Retirement Manager page itself; the breadcrumb and page title show where the member is"
+    },
+    "footer": {
+      "background": "navy",
+      "logo": "reverse",
+      "tagline": "lagoon",
+      "columns": {
+        "Harbour Super": ["Why Harbour", "How we invest", "Fees and costs", "Careers"],
+        "Members": ["Your super", "Your retirement", "Insurance", "Forms and documents"],
+        "Support": ["Help centre", "Contact us", "Make a complaint", "Accessibility"]
+      },
+      "mobile": "Columns collapse into accordion rows",
+      "legal": ["Acknowledgement of Country", "Disclaimer", "Privacy", "Terms of use", "Accessibility", "© 2026 Harbour Super (demo)"]
+    },
+    "pegaEmbedPlaceholder": {
+      "border": "2px dashed teal, radius 20",
+      "label": "Preview: Pega Constellation case. Replaced by the Retirement Income Application via Pega Web Embed.",
+      "rule": "Replace with the <pega-embed> web component when the RtmtMgr package is available. Theme the Constellation case with these tokens."
+    }
+  },
+
+  "imagery": {
+    "style": "Real, active people in their 60s and 70s, outdoors in natural light, often near the coast. Warm and candid.",
+    "do": ["Real people aged 55 and over", "Natural daylight, outdoor and coastal settings", "Candid moments: walking, talking, laughing", "Space on one side for text"],
+    "avoid": ["Staged stock poses and studio backdrops", "Clichés such as cocktails on a beach or piles of cash", "Images that suggest guaranteed outcomes", "Heavy filters or colour casts"],
+    "heroDesktop": { "treatment": "Full-bleed background image, object-fit: cover, copy column 560px on the left over the soft area", "height": 720 },
+    "heroMobile": { "treatment": "Rounded image below the buttons, radius 24, 358 × 300, cropped to the people" },
+    "licence": "Demo photos are for demonstration only. Confirm the licence for every image before client or public use."
+  },
+
+  "motif": {
+    "wave": "Two overlapping wave bands from the logo, lagoon at 70% over teal. Use to frame sections and image edges, not as decoration everywhere."
+  },
+
+  "assets": {
+    "folder": "public/brand",
+    "files": [
+      { "file": "harbour-super-logo.png", "use": "Primary logo, transparent", "size": "400 × 130 (1x, 2x, 3x)" },
+      { "file": "harbour-super-logo-white-bg.png", "use": "Primary logo on white", "size": "400 × 130 (1x, 2x, 3x)" },
+      { "file": "harbour-super-logo-reverse.png", "use": "Reverse logo, transparent, for dark backgrounds", "size": "400 × 130 (1x, 2x, 3x)" },
+      { "file": "harbour-super-logo-reverse-navy-bg.png", "use": "Reverse logo on navy", "size": "400 × 130 (1x, 2x, 3x)" },
+      { "file": "harbour-super-mark.png", "use": "Logo mark only", "size": "200 × 200 (1x, 2x, 3x)" },
+      { "file": "app-icon-512.png", "use": "PWA and app icon", "size": "512 × 512" },
+      { "file": "favicon-64.png", "use": "Favicon", "size": "64 × 64, plus favicon-64-32.png at 32 × 32" },
+      { "file": "hero-coastal-walk.png", "use": "Home banner photo", "size": "1672 × 941, plus hero-coastal-walk-1440.png" },
+      { "file": "social-share-1200x630.png", "use": "Open Graph link preview", "size": "1200 × 630" }
+    ],
+    "logoRules": {
+      "clearSpace": "At least the height of the word SUPER on every side",
+      "minimumWidth": { "fullLogoPx": 120, "fullLogoPrintMm": 30, "markPx": 24 },
+      "dont": ["Stretch or squash", "Change the colours", "Rotate", "Place on a busy background"],
+      "preferSvg": "In the React build, recreate the logo as an inline SVG plus live text, or export SVG from Figma, so it stays sharp"
+    }
+  },
+
+  "voice": {
+    "personality": "A calm, knowledgeable guide",
+    "principles": {
+      "clear": "Use everyday words. Say \"start your retirement income\", not \"commence an account-based pension\".",
+      "reassuring": "Explain what happens next and how long it takes. Never rush or pressure.",
+      "factual": "Describe options and rules. Point to an adviser when someone wants a recommendation."
+    },
+    "examples": [
+      { "say": "Log in to continue to Retirement Manager.", "avoid": "Access denied. Please authenticate." },
+      { "say": "There's a minimum you need to draw each year, based on your age.", "avoid": "You should take the minimum payment." },
+      { "say": "Your nomination has expired.", "avoid": "Warning! Action required immediately!" },
+      { "say": "Book an appointment with an adviser.", "avoid": "Let us find the perfect plan for you." },
+      { "say": "Save and come back later.", "avoid": "Don't lose your progress!" }
+    ],
+    "rules": [
+      "Sentence case, no exclamation marks, spell out \"and\" instead of \"&\"",
+      "General information only; never recommend an amount, investment option or product for a specific member",
+      "Label demo-only figures as illustrative"
+    ]
+  },
+
+  "accessibility": {
+    "target": "WCAG 2.2 AA",
+    "minBodyText": 16,
+    "minTouchTarget": 48,
+    "minIconHitArea": 44,
+    "focus": "Visible focus ring: 2px teal-700 outline with 2px offset",
+    "rules": [
+      "Status is never shown by colour alone; always include a text label",
+      "Every form field has a visible label",
+      "Support 200% text zoom and 400% page zoom without horizontal scrolling",
+      "Teal (#18999B) text only at 24px or larger"
+    ]
+  },
+
+  "demoData": {
+    "member": {
+      "name": "Margaret Chen",
+      "initials": "MC",
+      "age": 64,
+      "memberNumber": "HS1234567",
+      "accountType": "Super account",
+      "balance": "$380,214.56",
+      "balanceDate": "20 October 2026",
+      "change12m": "+$24,516 (6.9%)",
+      "lastLogin": "19 October 2026 at 7:42 pm"
+    },
+    "note": "All figures are fake and display-only"
+  },
+
+  "tailwind": {
+    "note": "Drop into tailwind.config.js under theme.extend",
+    "theme": {
+      "colors": {
+        "navy": "#0F4C6B",
+        "teal": { "DEFAULT": "#18999B", "700": "#0E6E74", "900": "#0A5056" },
+        "lagoon": { "DEFAULT": "#7ED9D0", "50": "#E7F6F4" },
+        "sand": "#F7F3E3",
+        "sun": { "DEFAULT": "#F3BE57", "50": "#FDF4DE" },
+        "ink": "#12334A",
+        "slate": "#4B6374",
+        "line": "#D5E2E6",
+        "mist": "#F2F7F8",
+        "positive": { "DEFAULT": "#1D7A50", "bg": "#E6F4EC" },
+        "negative": "#B3261E"
+      },
+      "fontFamily": {
+        "heading": ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        "sans": ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+      },
+      "fontSize": {
+        "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "display-l": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+        "h2": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+        "h3": ["22px", { "lineHeight": "30px", "fontWeight": "600" }],
+        "h4": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+        "number-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+        "body-l": ["18px", { "lineHeight": "28px" }],
+        "body-m": ["16px", { "lineHeight": "24px" }],
+        "body-s": ["14px", { "lineHeight": "20px" }],
+        "eyebrow": ["13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+        "caption": ["12px", { "lineHeight": "16px" }]
+      },
+      "borderRadius": { "input": "12px", "tile": "16px", "card": "20px", "panel": "24px" },
+      "maxWidth": { "content": "1280px" },
+      "boxShadow": { "overlay": "0 8px 24px rgba(15, 76, 107, 0.12)" }
+    }
+  }
+}
