@@ -9,6 +9,7 @@ type AccordionProps = {
   items: ReadonlyArray<AccordionItem>
   headingLevel?: 'h2' | 'h3' | 'h4'
   tone?: AccordionTone
+  defaultOpenIds?: string[]
   className?: string
 }
 
@@ -17,9 +18,9 @@ const toneClasses: Record<AccordionTone, { row: string; button: string; panel: s
   dark: { row: 'border-white/20', button: 'text-white', panel: 'text-lagoon-50' },
 }
 
-export function Accordion({ items, headingLevel: Heading = 'h3', tone = 'light', className }: AccordionProps) {
+export function Accordion({ items, headingLevel: Heading = 'h3', tone = 'light', defaultOpenIds = [], className }: AccordionProps) {
   const baseId = useId()
-  const [openIds, setOpenIds] = useState<ReadonlySet<string>>(new Set())
+  const [openIds, setOpenIds] = useState<ReadonlySet<string>>(() => new Set(defaultOpenIds))
   const styles = toneClasses[tone]
 
   const toggle = (id: string) =>

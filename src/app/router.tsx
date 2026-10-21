@@ -3,7 +3,10 @@ import { MemberLayout } from '../components/layout/MemberLayout'
 import { PublicLayout } from '../components/layout/PublicLayout'
 import { RedirectIfSignedIn } from '../features/auth/RedirectIfSignedIn'
 import { RequireAuth } from '../features/auth/RequireAuth'
+import { HomePage } from '../pages/Home/HomePage'
+import { JoinPage } from '../pages/Join/JoinPage'
 import { PlaceholderPage } from '../pages/PlaceholderPage'
+import { RetirementPlannerPage } from '../pages/RetirementPlanner/RetirementPlannerPage'
 import { devRoutes } from './devRoutes'
 import { RootLayout } from './RootLayout'
 
@@ -15,9 +18,9 @@ export const router = createBrowserRouter(
         {
           element: <PublicLayout />,
           children: [
-            { index: true, element: <PlaceholderPage title="Home" /> },
-            { path: 'retirement-planner', element: <PlaceholderPage title="Retirement planner" /> },
-            { path: 'join', element: <PlaceholderPage title="Join" /> },
+            { index: true, element: <HomePage /> },
+            { path: 'retirement-planner', element: <RetirementPlannerPage /> },
+            { path: 'join', element: <JoinPage /> },
             { path: 'not-found', element: <PlaceholderPage title="Page not found" /> },
           ],
         },

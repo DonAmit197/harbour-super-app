@@ -18,7 +18,7 @@ export function SiteFooter() {
     <footer className="bg-navy text-white">
       <PageContainer className="flex flex-col gap-8 py-12 lg:py-16">
         <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">
-          <div className="flex flex-col gap-4">
+          <div className="flex shrink-0 flex-col gap-4">
             <Logo variant="reverse" className="w-40 lg:w-44" />
             <p className="text-body-l text-lagoon">{footerContent.tagline}</p>
           </div>
