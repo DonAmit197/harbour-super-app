@@ -1,11 +1,11 @@
-import { Outlet, useNavigate } from 'react-router'
+import { Outlet } from 'react-router'
+import { useAuth } from '../../features/auth/authContext'
 import { MemberHeader } from './MemberHeader'
 import { SiteFooter } from './SiteFooter'
 import { SkipLink } from './SkipLink'
 
 export function MemberLayout() {
-  const navigate = useNavigate()
-  const logOut = () => navigate('/')
+  const { logOut } = useAuth()
 
   return (
     <div className="flex min-h-dvh flex-col bg-mist">

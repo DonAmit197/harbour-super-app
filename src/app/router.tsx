@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router'
 import { MemberLayout } from '../components/layout/MemberLayout'
 import { PublicLayout } from '../components/layout/PublicLayout'
+import { RedirectIfSignedIn } from '../features/auth/RedirectIfSignedIn'
+import { RequireAuth } from '../features/auth/RequireAuth'
 import { PlaceholderPage } from '../pages/PlaceholderPage'
 import { devRoutes } from './devRoutes'
 import { RootLayout } from './RootLayout'
@@ -19,12 +21,24 @@ export const router = createBrowserRouter(
             { path: 'not-found', element: <PlaceholderPage title="Page not found" /> },
           ],
         },
-        { path: 'login', element: <PlaceholderPage title="Log in" /> },
         {
-          element: <MemberLayout />,
+          path: 'login',
+          element: (
+            <RedirectIfSignedIn>
+              <PlaceholderPage title="Log in" />
+            </RedirectIfSignedIn>
+          ),
+        },
+        {
+          element: <RequireAuth />,
           children: [
-            { path: 'dashboard', element: <PlaceholderPage title="Dashboard" /> },
-            { path: 'retirement-manager', element: <PlaceholderPage title="Retirement Manager" /> },
+            {
+              element: <MemberLayout />,
+              children: [
+                { path: 'dashboard', element: <PlaceholderPage title="Dashboard" /> },
+                { path: 'retirement-manager', element: <PlaceholderPage title="Retirement Manager" /> },
+              ],
+            },
           ],
         },
         ...devRoutes,

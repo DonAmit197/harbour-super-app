@@ -21,7 +21,7 @@ src/
   components/ui/        Button, TextField, Card, Notice, Chip, IconTile, SegmentedControl, Icon, Logo, VisuallyHidden
   components/layout/    PublicLayout, MemberLayout, SiteHeader, MemberHeader, MobileMenu, SiteFooter, SkipLink
   components/charts/    BalanceLineChart, InvestmentMixDonut, ContributionBars (plain SVG)
-  features/auth/        AuthProvider, useAuth, RequireAuth, checkDemoCredentials
+  features/auth/        AuthProvider, useAuth, RequireAuth, demoLogin (checkDemoCredentials)
   features/pega/        ConstellationPlaceholder (the future embed slot)
   features/scroll/      useSmoothScroll (Lenis), ScrollToTopOnRouteChange
   content/              navigation, page copy and demo data as typed objects

@@ -15,7 +15,8 @@ Be honest about this in the README: `VITE_` values are bundled into the browser 
 can read them. This is a demo gate, not security. Real authentication arrives with Pega in Phase 2.
 
 ## How it works
-- `checkDemoCredentials(username, password)` compares trimmed username (case-insensitive) and exact password
+- `checkDemoCredentials(username, password)` lives in `features/auth/demoLogin.ts` (the user's global settings
+  block file names containing "credentials"). It compares trimmed username (case-insensitive) and exact password
   with `import.meta.env`. Keep it in `features/auth/` behind a small `AuthProvider` so it can be swapped for OAuth later.
 - On success, store `{ signedIn: true }` in `sessionStorage` (cleared when the tab closes) and go to `/dashboard`.
 - `RequireAuth` wraps `/dashboard` and `/retirement-manager`. Signed-out visitors go to `/login`, keeping the

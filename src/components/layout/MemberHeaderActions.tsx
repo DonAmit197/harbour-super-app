@@ -2,9 +2,9 @@ import { headerLabels } from '../../content/navigation'
 import { ButtonLink } from '../ui/ButtonLink'
 import { FutureLink } from '../ui/FutureLink'
 import { Icon } from '../ui/Icon'
+import { retirementManagerPath } from '../../features/auth/authPaths'
 import { ProfileMenu } from './ProfileMenu'
 
-export const retirementManagerPath = '/retirement-manager'
 
 type MemberHeaderActionsProps = { showRetirementManager: boolean; onLogOut: () => void }
 
