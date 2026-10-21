@@ -7,7 +7,7 @@ import { DashboardPage } from '../pages/Dashboard/DashboardPage'
 import { HomePage } from '../pages/Home/HomePage'
 import { JoinPage } from '../pages/Join/JoinPage'
 import { LoginPage } from '../pages/Login/LoginPage'
-import { PlaceholderPage } from '../pages/PlaceholderPage'
+import { NotFoundPage } from '../pages/NotFound/NotFoundPage'
 import { RetirementManagerPage } from '../pages/RetirementManager/RetirementManagerPage'
 import { RetirementPlannerPage } from '../pages/RetirementPlanner/RetirementPlannerPage'
 import { devRoutes } from './devRoutes'
@@ -24,7 +24,7 @@ export const router = createBrowserRouter(
             { index: true, element: <HomePage /> },
             { path: 'retirement-planner', element: <RetirementPlannerPage /> },
             { path: 'join', element: <JoinPage /> },
-            { path: 'not-found', element: <PlaceholderPage title="Page not found" /> },
+            { path: 'not-found', element: <NotFoundPage /> },
           ],
         },
         {
@@ -48,7 +48,7 @@ export const router = createBrowserRouter(
           ],
         },
         ...devRoutes,
-        { element: <PublicLayout />, children: [{ path: '*', element: <PlaceholderPage title="Page not found" /> }] },
+        { element: <PublicLayout />, children: [{ path: '*', element: <NotFoundPage /> }] },
       ],
     },
   ],
