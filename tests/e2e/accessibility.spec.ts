@@ -5,7 +5,7 @@ import { memberRoutes, publicRoutes, startSignedIn } from './helpers'
 const routes = [...publicRoutes.map((path) => ({ path, member: false })), ...memberRoutes.map((path) => ({ path, member: true }))]
 
 for (const { path, member } of routes) {
-  test(`${path} has no axe violations and the required structure`, async ({ page, context }) => {
+  test(`${path}${member ? ' (signed in)' : ''} has no axe violations and the required structure`, async ({ page, context }) => {
     if (member) await startSignedIn(context)
     await page.goto(path)
     await expect(page.locator('h1')).toHaveCount(1)

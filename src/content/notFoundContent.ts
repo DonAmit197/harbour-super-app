@@ -5,4 +5,5 @@ export const notFoundContent = {
   intro: 'It may have moved, or the link may be out of date.',
   home: 'Go to the home page',
   logIn: 'Log in',
+  dashboard: 'Go to your dashboard',
 }

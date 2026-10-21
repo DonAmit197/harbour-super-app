@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router'
+import { AuthAwareLayout } from '../components/layout/AuthAwareLayout'
 import { MemberLayout } from '../components/layout/MemberLayout'
 import { PublicLayout } from '../components/layout/PublicLayout'
 import { RedirectIfSignedIn } from '../features/auth/RedirectIfSignedIn'
@@ -24,7 +25,6 @@ export const router = createBrowserRouter(
             { index: true, element: <HomePage /> },
             { path: 'retirement-planner', element: <RetirementPlannerPage /> },
             { path: 'join', element: <JoinPage /> },
-            { path: 'not-found', element: <NotFoundPage /> },
           ],
         },
         {
@@ -48,7 +48,13 @@ export const router = createBrowserRouter(
           ],
         },
         ...devRoutes,
-        { element: <PublicLayout />, children: [{ path: '*', element: <NotFoundPage /> }] },
+        {
+          element: <AuthAwareLayout />,
+          children: [
+            { path: 'not-found', element: <NotFoundPage /> },
+            { path: '*', element: <NotFoundPage /> },
+          ],
+        },
       ],
     },
   ],

@@ -3,7 +3,7 @@ import { expect, type BrowserContext, type Page, type TestInfo } from '@playwrig
 export const sessionKey = 'harbour-super-demo-session'
 
 export const publicRoutes = ['./', './retirement-planner', './join', './login', './not-found']
-export const memberRoutes = ['./dashboard', './retirement-manager']
+export const memberRoutes = ['./dashboard', './retirement-manager', './not-found']
 
 export const isPhone = (testInfo: TestInfo) => testInfo.project.name === 'phone'
 

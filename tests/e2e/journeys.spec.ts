@@ -73,3 +73,15 @@ test('log out returns to the home page and protects member pages again', async (
   await page.goto('./dashboard')
   await expectPath(page, '/login')
 })
+
+test('a signed-in member who reaches the 404 page stays in the member area', async ({ page }) => {
+  await page.goto('./login')
+  await logInThroughForm(page)
+  await expectPath(page, '/dashboard')
+  await page.getByRole('link', { name: /Combine your super/ }).click()
+  await expectPath(page, '/not-found')
+  await expect(page.getByRole('banner').getByRole('link', { name: 'Harbour Super dashboard' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Log in', exact: true })).toHaveCount(0)
+  await page.getByRole('link', { name: 'Go to your dashboard' }).click()
+  await expectPath(page, '/dashboard')
+})

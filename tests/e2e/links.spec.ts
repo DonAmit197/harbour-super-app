@@ -4,7 +4,7 @@ import { expectPath, startSignedIn } from './helpers'
 type Matrix = Record<string, string>
 
 const publicLinks: Matrix = { 'Harbour Super home': '/', 'Log in': '/login', Join: '/join' }
-const memberLinks: Matrix = { 'Harbour Super dashboard': '/dashboard', Home: '/dashboard', 'Retirement Manager': '/retirement-manager' }
+const memberLinks: Matrix = { 'Harbour Super dashboard': '/dashboard', Dashboard: '/dashboard', 'Retirement Manager': '/retirement-manager' }
 
 // Journey links per page (from docs/04). Every other link must go to the 404 page.
 const pages: Array<{ path: string; member?: boolean; links: Matrix }> = [
@@ -22,10 +22,11 @@ const pages: Array<{ path: string; member?: boolean; links: Matrix }> = [
     links: { ...memberLinks, 'Open Retirement Manager': '/retirement-manager', 'Start your retirement income Apply in Retirement Manager': '/retirement-manager' },
   },
   { path: './retirement-manager', member: true, links: { ...memberLinks, Dashboard: '/dashboard' } },
+  { path: './not-found', member: true, links: { ...memberLinks, 'Go to your dashboard': '/dashboard' } },
 ]
 
 for (const { path, member, links } of pages) {
-  test(`every link on ${path} goes where the link matrix says`, async ({ page, context }) => {
+  test(`every link on ${path}${member ? ' (signed in)' : ''} goes where the link matrix says`, async ({ page, context }) => {
     if (member) await startSignedIn(context)
     await page.goto(path)
     const found = await page.locator('a[href]:not([href="#main"])').evaluateAll((anchors) =>

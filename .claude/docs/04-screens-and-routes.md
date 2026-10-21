@@ -23,9 +23,9 @@
 | Home | Log in to your account → `/login`; Your retirement planner, Open your retirement planner → `/retirement-planner` |
 | Planner | Retirement Manager, Go to Retirement Manager → `/login?next=retirement-manager` (or `/retirement-manager` if already logged in); Become a member → `/join` |
 | Log in | Log in → `/dashboard`; Back / Back to home → `/`; Join now → `/join` |
-| Member pages | Logo → `/dashboard`; Home nav → `/dashboard`; Retirement Manager (header, banner, quick action "Start your retirement income") → `/retirement-manager`; Log out (profile menu) → `/` |
+| Member pages | Logo → `/dashboard`; Dashboard nav → `/dashboard`; Retirement Manager (header, banner, quick action "Start your retirement income") → `/retirement-manager`; Log out (profile menu) → `/` |
 | Retirement Manager | Breadcrumb / Back "Dashboard" → `/dashboard` |
-| 404 | Go to the home page → `/`; Log in → `/login` |
+| 404 | Signed out: public header, Go to the home page → `/`, Log in → `/login`. Signed in: member header, Go to your dashboard → `/dashboard` (no Log in button) |
 
 Every other link, nav item, card, tile, footer link and FAQ "read more" uses `FutureLink` → `/not-found`.
 FAQ accordions open and close (they are not links). Period buttons (1Y, 3Y, 5Y, All) change the selected state only.
@@ -41,6 +41,8 @@ FAQ accordions open and close (they are not links). Period buttons (1Y, 3Y, 5Y, 
    mobile shows the photo below the buttons, rounded 24px, cropped to the couple (`object-position: right`).
 5. **Log in desktop:** right panel uses `login.jpg`.
 6. **Copy:** use the mockup text word for word. Sentence case, no exclamation marks.
+7. **Member nav:** the first item is "Dashboard", not "Home", so members never confuse it with the public home page.
+8. **404 while signed in:** the page uses the member layout and its main button goes to the dashboard.
 
 ## Runtime assets (copy in Task 3, rename without spaces)
 - `assets/images/Logo/Full.svg` → `public/brand/logo.svg`; `Full reverse.svg` → `logo-reverse.svg`; `Mark.svg` → `mark.svg`

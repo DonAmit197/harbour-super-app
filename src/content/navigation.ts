@@ -11,7 +11,7 @@ export const publicNav: NavItem[] = [
 ]
 
 export const memberNav: NavItem[] = [
-  { label: 'Home', to: '/dashboard' },
+  { label: 'Dashboard', to: '/dashboard' },
   { label: 'My super' },
   { label: 'Investments' },
   { label: 'Insurance' },
