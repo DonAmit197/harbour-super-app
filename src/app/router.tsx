@@ -8,6 +8,7 @@ import { HomePage } from '../pages/Home/HomePage'
 import { JoinPage } from '../pages/Join/JoinPage'
 import { LoginPage } from '../pages/Login/LoginPage'
 import { PlaceholderPage } from '../pages/PlaceholderPage'
+import { RetirementManagerPage } from '../pages/RetirementManager/RetirementManagerPage'
 import { RetirementPlannerPage } from '../pages/RetirementPlanner/RetirementPlannerPage'
 import { devRoutes } from './devRoutes'
 import { RootLayout } from './RootLayout'
@@ -41,7 +42,7 @@ export const router = createBrowserRouter(
               element: <MemberLayout />,
               children: [
                 { path: 'dashboard', element: <DashboardPage /> },
-                { path: 'retirement-manager', element: <PlaceholderPage title="Retirement Manager" /> },
+                { path: 'retirement-manager', element: <RetirementManagerPage /> },
               ],
             },
           ],
