@@ -5,6 +5,7 @@ import { RedirectIfSignedIn } from '../features/auth/RedirectIfSignedIn'
 import { RequireAuth } from '../features/auth/RequireAuth'
 import { HomePage } from '../pages/Home/HomePage'
 import { JoinPage } from '../pages/Join/JoinPage'
+import { LoginPage } from '../pages/Login/LoginPage'
 import { PlaceholderPage } from '../pages/PlaceholderPage'
 import { RetirementPlannerPage } from '../pages/RetirementPlanner/RetirementPlannerPage'
 import { devRoutes } from './devRoutes'
@@ -28,7 +29,7 @@ export const router = createBrowserRouter(
           path: 'login',
           element: (
             <RedirectIfSignedIn>
-              <PlaceholderPage title="Log in" />
+              <LoginPage />
             </RedirectIfSignedIn>
           ),
         },
