@@ -1,7 +1,7 @@
 const logoFiles = {
-  full: { file: 'brand/logo.png', width: 173, height: 40 },
-  reverse: { file: 'brand/logo-reverse.png', width: 173, height: 40 },
-  mark: { file: 'brand/mark.png', width: 64, height: 40 },
+  full: { file: 'brand/logo.svg', width: 173, height: 40 },
+  reverse: { file: 'brand/logo-reverse.svg', width: 173, height: 40 },
+  mark: { file: 'brand/mark.svg', width: 64, height: 40 },
 } as const
 
 export type LogoVariant = keyof typeof logoFiles

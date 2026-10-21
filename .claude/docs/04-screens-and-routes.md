@@ -39,11 +39,14 @@ FAQ accordions open and close (they are not links). Period buttons (1Y, 3Y, 5Y, 
    Demo notice: "Demo prototype: use the demo username and password shared with you." Never print the credentials on screen.
 4. **Home hero:** desktop uses `hero.jpg` as a full-bleed background (copy column 560px on the left over the soft area, height 720px);
    mobile shows the photo below the buttons, rounded 24px, cropped to the couple (`object-position: right`).
-5. **Log in desktop:** right panel uses `login.png`.
+5. **Log in desktop:** right panel uses `login.jpg`.
 6. **Copy:** use the mockup text word for word. Sentence case, no exclamation marks.
 
 ## Runtime assets (copy in Task 3, rename without spaces)
-- `assets/images/Logo/Full.png` → `public/brand/logo.png`; `Full reverse.png` → `logo-reverse.png`; `Mark.png` → `mark.png` (+ favicon)
-- `assets/images/Hero.jpg` → `public/images/hero.jpg`; `Login-desktop.png` → `public/images/login.png`
+- `assets/images/Logo/Full.svg` → `public/brand/logo.svg`; `Full reverse.svg` → `logo-reverse.svg`; `Mark.svg` → `mark.svg`
+- Favicon: `Mark.png` → `public/brand/favicon.png` until the user supplies a final favicon
+- Photos are compressed with `sharp` (`scripts/optimise-images.mjs`): `Hero.jpg` → `public/images/hero.jpg` (1920w)
+  and `hero-mobile.jpg` (960w, for phones); `Login-desktop.png` → `public/images/login.jpg` (720w)
+- `login.jpg` has the headline "Guiding you to a brighter tomorrow." baked in, so its alt text must include that line
 - `assets/icons/Icon/*.svg` → `src/assets/icons/` with stroke colour replaced by `currentColor`
 - Mocks and PDFs are never shipped.

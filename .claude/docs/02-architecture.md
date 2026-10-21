@@ -13,8 +13,8 @@
 ```
 assets/                 design inputs (mocks, branding PDFs, style guide JSON). Not shipped, except files copied to public/
 build-tools/            Vite plugin that turns the style guide JSON into CSS (see 03)
-public/brand/           logo.png, logo-reverse.png, mark.png, favicon files
-public/images/          hero.jpg, login.png
+public/brand/           logo.svg, logo-reverse.svg, mark.svg, favicon.png
+public/images/          hero.jpg, hero-mobile.jpg, login.jpg (compressed by scripts/optimise-images.mjs)
 src/
   app/                  App.tsx, router.tsx, providers
   pages/<PageName>/     one folder per page; the page file only composes sections
