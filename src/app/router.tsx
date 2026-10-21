@@ -7,6 +7,10 @@ const devRoutes: RouteObject[] = import.meta.env.DEV
         path: 'dev/tokens',
         lazy: () => import('../pages/DevTokens/DevTokensPage').then((module) => ({ Component: module.DevTokensPage })),
       },
+      {
+        path: 'dev/icons',
+        lazy: () => import('../pages/DevIcons/DevIconsPage').then((module) => ({ Component: module.DevIconsPage })),
+      },
     ]
   : []
 

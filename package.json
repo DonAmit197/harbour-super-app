@@ -10,7 +10,8 @@
     "lint": "eslint . && npm run check:lines",
     "check:lines": "node scripts/check-file-length.mjs",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "copy:assets": "node scripts/copy-assets.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
