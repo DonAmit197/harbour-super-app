@@ -29,7 +29,7 @@ Large text, clear steps and plain language matter more than visual flair.
   lump sum withdrawal. Each becomes a new page with its own embed slot.
 - Adviser and contact centre portals reusing the same components.
 - Real authentication (OAuth with PKCE against Pega) replacing the demo login.
-- Moving the repository from the personal GitHub account (DonAmit07) to the
+- Moving the repository from the personal GitHub account (DonAmit197) to the
   organisation's GitHub. Only the remote and the base path should need to change.
 
 Keep the code ready for this: the embed slot is its own component, auth sits behind a

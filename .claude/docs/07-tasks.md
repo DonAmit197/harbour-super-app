@@ -49,4 +49,4 @@ nomination alert, investment mix donut, contributions bars, transactions, insura
 
 **Task 12 · Test and audit.** Everything in 08. Fix issues before moving on.
 
-**Task 13 · Deploy.** GitHub Actions to GitHub Pages under DonAmit07 (09). Done when: the live URL passes the journey tests.
+**Task 13 · Deploy.** GitHub Actions to GitHub Pages under DonAmit197 (09). Done when: the live URL passes the journey tests.

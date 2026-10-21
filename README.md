@@ -3,7 +3,7 @@
 A mobile-first React website for **Harbour Super**, a fictional super fund. It is the member-facing shell that will
 host the Pega Constellation **Retirement Manager** application. In Phase 1 the Pega app is a labelled placeholder.
 
-Live demo: https://donamit07.github.io/harbour-super-app/
+Live demo: https://donamit197.github.io/harbour-super-app/
 
 ## What you can try
 - **Existing member:** Home → Log in → Dashboard → Retirement Manager.
@@ -46,7 +46,7 @@ One-time setup in the GitHub repository:
 
 Check the live site with the end-to-end tests:
 ```bash
-BASE_URL=https://donamit07.github.io/harbour-super-app/ npx playwright test
+BASE_URL=https://donamit197.github.io/harbour-super-app/ npx playwright test
 ```
 
 ## Moving to the organisation's GitHub

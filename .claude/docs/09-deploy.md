@@ -1,8 +1,8 @@
 # 09 · Deploy to GitHub Pages
 
 ## Now: personal account
-- Repository: `DonAmit07/harbour-super-app` (ask the user before creating it or pushing; confirm the name).
-- Site URL: `https://donamit07.github.io/harbour-super-app/`.
+- Repository: `DonAmit197/harbour-super-app` (ask the user before creating it or pushing; confirm the name).
+- Site URL: `https://donamit197.github.io/harbour-super-app/`.
 - Vite `base` and the router `basename` both come from `VITE_BASE_PATH` (default `/harbour-super-app/`).
 
 ## Workflow: `.github/workflows/deploy.yml`
