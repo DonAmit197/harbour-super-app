@@ -20,7 +20,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 // Small is 44px high, not 38px, to meet the minimum touch target.
 const sizeClasses: Record<ButtonSize, string> = {
   large: 'min-h-12 px-6 py-3.5 text-button',
-  small: 'min-h-11 px-4 py-2 text-body-s-strong',
+  small: 'min-h-11 px-4 py-2 text-body-s-strong whitespace-nowrap',
 }
 
 export function buttonClassName({ variant = 'primary', size = 'large', fullWidth = false }: ButtonStyleProps) {

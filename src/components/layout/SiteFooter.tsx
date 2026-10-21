@@ -23,14 +23,16 @@ export function SiteFooter() {
             <p className="text-body-l text-lagoon">{footerContent.tagline}</p>
           </div>
           <Accordion items={accordionItems} headingLevel="h2" tone="dark" className="md:hidden" />
-          <div className="hidden gap-10 md:grid md:grid-cols-4 lg:gap-14">
+          <div className="hidden gap-10 md:grid md:grid-cols-3 lg:gap-14 xl:grid-cols-4">
             {footerColumns.map((column) => (
               <div key={column.title} className="flex flex-col gap-3">
                 <h2 className="text-body-m-strong text-white">{column.title}</h2>
                 <FooterLinkList links={column.links} />
               </div>
             ))}
-            <FooterContact />
+            <div className="md:col-span-3 xl:col-span-1">
+              <FooterContact />
+            </div>
           </div>
           <div className="md:hidden">
             <FooterContact />

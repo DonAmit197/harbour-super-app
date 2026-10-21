@@ -37,11 +37,11 @@ export const typeScaleNames: Record<string, string> = {
   button: 'button',
 }
 
-export const radiusNames = ['input', 'tile', 'card', 'panel', 'pill'] as const
+export const radiusNames = ['input', 'tile', 'card', 'panel', 'pill', 'bar'] as const
 
 export const breakpointNames = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 
-export const gradientNames ={ banner: 'banner', heroWash: 'hero-wash' } as const
+export const gradientNames = { banner: 'banner', heroWash: 'hero-wash' } as const
 
 const typeProperties = ['family', 'weight', 'size', 'lineHeight', 'letterSpacing']
 

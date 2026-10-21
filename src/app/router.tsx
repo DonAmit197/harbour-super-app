@@ -3,6 +3,7 @@ import { MemberLayout } from '../components/layout/MemberLayout'
 import { PublicLayout } from '../components/layout/PublicLayout'
 import { RedirectIfSignedIn } from '../features/auth/RedirectIfSignedIn'
 import { RequireAuth } from '../features/auth/RequireAuth'
+import { DashboardPage } from '../pages/Dashboard/DashboardPage'
 import { HomePage } from '../pages/Home/HomePage'
 import { JoinPage } from '../pages/Join/JoinPage'
 import { LoginPage } from '../pages/Login/LoginPage'
@@ -39,7 +40,7 @@ export const router = createBrowserRouter(
             {
               element: <MemberLayout />,
               children: [
-                { path: 'dashboard', element: <PlaceholderPage title="Dashboard" /> },
+                { path: 'dashboard', element: <DashboardPage /> },
                 { path: 'retirement-manager', element: <PlaceholderPage title="Retirement Manager" /> },
               ],
             },
