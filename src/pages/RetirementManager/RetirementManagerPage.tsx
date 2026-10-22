@@ -1,6 +1,6 @@
 import { PageContainer } from '../../components/layout/PageContainer'
 import { retirementManagerContent } from '../../content/retirementManagerContent'
-import { ConstellationPlaceholder } from '../../features/pega/ConstellationPlaceholder'
+import { ConstellationEmbed } from '../../features/pega/ConstellationEmbed'
 import { usePageTitle } from '../../hooks/usePageTitle'
 import { ManagerBreadcrumb } from './ManagerBreadcrumb'
 import { ManagerSidePanel } from './ManagerSidePanel'
@@ -16,7 +16,7 @@ export function RetirementManagerPage() {
       </div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <div className="lg:col-span-8">
-          <ConstellationPlaceholder />
+          <ConstellationEmbed />
         </div>
         <div className="lg:col-span-4">
           <ManagerSidePanel />

@@ -11,7 +11,7 @@ test('journey A: existing member logs in from home and opens Retirement Manager'
 
   await page.getByRole('banner').getByRole('link', { name: 'Retirement Manager' }).click()
   await expectPath(page, '/retirement-manager')
-  await expect(page.getByRole('region', { name: 'Retirement Income Application (placeholder)' })).toBeVisible()
+  await expect(page.getByRole('region', { name: 'Retirement Income Application' })).toBeVisible()
   await expect(page.locator('#pega-constellation-root')).toBeVisible()
   await expect(page.getByRole('banner').getByRole('link', { name: 'Retirement Manager' })).toHaveCount(0)
 })

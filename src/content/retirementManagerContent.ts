@@ -5,9 +5,10 @@ export const retirementManagerContent = {
   title: 'Retirement Manager',
   intro: 'Start your retirement income and track each step in one place.',
   slot: {
-    title: 'Retirement Income Application (placeholder)',
-    label: 'Placeholder: Constellation React app',
-    explanation: 'The Pega Retirement Income Application will be embedded here with Pega Web Embed.',
+    title: 'Retirement Income Application',
+    loading: 'Loading your retirement income application.',
+    errorTitle: 'We could not load the application',
+    errorText: 'Check your internet connection and refresh the page. If it keeps happening, call us on 1300 975 707.',
   },
   help: {
     title: 'Need help?',

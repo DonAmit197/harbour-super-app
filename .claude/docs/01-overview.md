@@ -13,8 +13,7 @@ have left Harbour Super.
 ## What Phase 1 delivers
 - A public website: Home, Retirement planner, Join, Log in, 404.
 - A member area behind a demo login: Dashboard and Retirement Manager.
-- Retirement Manager holds a clearly labelled slot: **"Placeholder: Constellation React app"**.
-  The LSA team will drop the Pega Retirement Income Application into this slot later.
+- Retirement Manager embeds the Pega Retirement Income Application with Pega Web Embed.
 - Fake, display-only data for one demo member: Margaret Chen, 64.
 - Hosted on GitHub Pages for business review.
 

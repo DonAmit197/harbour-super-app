@@ -35,7 +35,7 @@ Run each spec in two projects: **phone** (390 × 844, touch, mobile user agent) 
 ## Manual screen reader pass (Task 12)
 Claude Code cannot run a screen reader. Write a short checklist into the progress file for a human to run
 with NVDA on Windows and VoiceOver on iPhone: page titles, landmarks, headings list, form labels and errors,
-chart summaries, menu dialog, Pega placeholder region.
+chart summaries, menu dialog, Pega embed region.
 
 ## Report format
 End each task with: commands run, pass or fail for each, anything skipped and why.

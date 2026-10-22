@@ -22,7 +22,7 @@ src/
   components/layout/    PublicLayout, MemberLayout, SiteHeader, MemberHeader, MobileMenu, SiteFooter, SkipLink
   components/charts/    BalanceLineChart, InvestmentMixDonut, ContributionBars (plain SVG)
   features/auth/        AuthProvider, useAuth, RequireAuth, demoLogin (checkDemoCredentials)
-  features/pega/        ConstellationPlaceholder (the future embed slot)
+  features/pega/        ConstellationEmbed (Pega Web Embed slot), pegaEmbedConfig, loadPegaScript, usePegaEmbed
   features/scroll/      useSmoothScroll (Lenis), ScrollToTopOnRouteChange
   content/              navigation, page copy and demo data as typed objects
   hooks/                usePageTitle, useFocusMainHeading

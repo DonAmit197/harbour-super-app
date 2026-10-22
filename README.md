@@ -1,7 +1,7 @@
 # Harbour Super member website (Phase 1)
 
 A mobile-first React website for **Harbour Super**, a fictional super fund. It is the member-facing shell that will
-host the Pega Constellation **Retirement Manager** application. In Phase 1 the Pega app is a labelled placeholder.
+host the Pega Constellation **Retirement Manager** application. The Retirement Manager page embeds the Pega Retirement Income Application with Pega Web Embed.
 
 Live demo: https://donamit197.github.io/harbour-super-app/
 
@@ -55,7 +55,8 @@ Only three things change:
 2. Set `VITE_BASE_PATH` to `/<new repository name>/` (or `/` for a custom domain), in `.env` and in the Actions variable.
 3. Add the same Actions secrets and variable in the new repository.
 
-## Phase 2
-The Retirement Manager page renders `src/features/pega/ConstellationPlaceholder.tsx`, which contains
-`<div id="pega-constellation-root">`. That is where the Pega Web Embed (or the Constellation React SDK) will be mounted,
-themed with the same style guide JSON.
+## Pega Web Embed
+The Retirement Manager page renders `src/features/pega/ConstellationEmbed.tsx`. It loads `pega-embed.js` only on that page
+and mounts `<pega-embed>` inside `<div id="pega-constellation-root">`. The server URL, app alias, case type and OAuth
+client ID live in `src/features/pega/pegaEmbedConfig.ts` (none are secret). The Pega OAuth client must allow every site
+origin that hosts the embed, for example `http://localhost:5173` and `https://donamit197.github.io`.

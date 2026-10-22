@@ -31,9 +31,9 @@ Every other link, nav item, card, tile, footer link and FAQ "read more" uses `Fu
 FAQ accordions open and close (they are not links). Period buttons (1Y, 3Y, 5Y, All) change the selected state only.
 
 ## Agreed changes from the mockups
-1. **Retirement Manager:** the dashed slot shows only "Placeholder: Constellation React app" with one line of
-   explanation. Do not build the Welcome step from the mockup. Keep the title, breadcrumb and side panel ("Need help?",
-   "What you'll need"). Render it with `features/pega/ConstellationPlaceholder` containing `<div id="pega-constellation-root">`.
+1. **Retirement Manager:** the slot hosts the Pega Retirement Income Application through Pega Web Embed
+   (`features/pega/ConstellationEmbed`, settings in `features/pega/pegaEmbedConfig.ts`), mounted in `<div id="pega-constellation-root">`.
+   Keep the title, breadcrumb and side panel ("Need help?", "What you'll need").
 2. **Retirement Manager header:** hide the "Retirement Manager" button on this page (desktop and mobile).
 3. **Log in:** first field label is "Username" with helper "Use the demo username shared with you." Fields start empty.
    Demo notice: "Demo prototype: use the demo username and password shared with you." Never print the credentials on screen.

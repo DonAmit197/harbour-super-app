@@ -43,7 +43,7 @@ Done when: unit tests cover right, wrong and empty credentials and the protected
 **Task 9 · Dashboard.** Greeting, Retirement Manager banner, balance card with line chart and period control, quick actions,
 nomination alert, investment mix donut, contributions bars, transactions, insurance. Data from `src/content/dashboardData.ts`.
 
-**Task 10 · Retirement Manager.** Breadcrumb, title, `ConstellationPlaceholder` slot, side panel, header button hidden.
+**Task 10 · Retirement Manager.** Breadcrumb, title, `ConstellationEmbed` slot, side panel, header button hidden.
 
 **Task 11 · 404 and link audit.** Build the 404 page. Walk every link on every page against the link matrix in 04.
 

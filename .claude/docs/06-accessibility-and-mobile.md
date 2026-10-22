@@ -19,7 +19,7 @@ Target: WCAG 2.2 AA. Audience is mostly 60+, often on phones.
 - FAQ: `<button aria-expanded aria-controls>` for each question.
 - Mobile menu is a dialog: focus trapped while open, Esc closes it, focus returns to the menu button.
 - Segmented period control: buttons with `aria-pressed`.
-- The Pega slot is `<section aria-labelledby>` titled "Retirement Income Application (placeholder)".
+- The Pega slot is `<section aria-labelledby>` titled "Retirement Income Application". Loading and error states are announced through an `<output>` live region.
 - Status text is never colour only.
 - Visible focus ring on every interactive element: 2px teal-700 outline, 2px offset.
 
